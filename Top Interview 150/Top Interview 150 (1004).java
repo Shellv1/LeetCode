@@ -1,3 +1,6 @@
+// Runtime: 0ms     (Beats 100.00%)
+// Memory:  44.49MB (Beats 41.80%)
+
 class Solution {
     public int removeDuplicates(int[] nums) {
         // Early return if array is empty
