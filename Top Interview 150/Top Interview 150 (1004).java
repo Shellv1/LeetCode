@@ -34,7 +34,8 @@ class Solution {
                 nums[j] = nums[i];
                 iTolerance = 1;
             }
-    }
+        }
+        
         // Return length of non-duplicates
         return j;
     }
