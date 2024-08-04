@@ -1,5 +1,5 @@
 // Runtime: 1ms     (Beats 99.79%)
-// Memory:  52.96MB (Beats 47.03)
+// Memory:  52.96MB (Beats 47.03%)
 
 class Solution {
     public int majorityElement(int[] nums) {
