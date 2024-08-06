@@ -1,8 +1,8 @@
 // Top Interview 150 | Array / String 004 | Remove Duplicates from a Sorted Array II
 // Time Complexity: O(n^2)
 
-// LeetCode Runtime: 0ms     (Beats 100.00%)
-// LeetCode Memory:  44.49MB (Beats 42.51%)
+// LeetCode Runtime: 0ms      (Beats 100.00%)
+// LeetCode Memory:  44.49MB  (Beats 42.51%)
 
 class Solution {
     public int removeDuplicates(int[] nums) {
