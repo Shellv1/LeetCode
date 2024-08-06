@@ -1,5 +1,8 @@
-// Runtime: 1ms     (Beats 99.79%)
-// Memory:  52.96MB (Beats 47.03%)
+// Top Interview 150 | Array / String 005 | Majority Element
+// Time Complexity: O(n^2)
+
+// LeetCode Runtime: 1ms      (Beats 99.79%)
+// LeetCode Memory:  52.96MB  (Beats 47.03%)
 
 class Solution {
     public int majorityElement(int[] nums) {
