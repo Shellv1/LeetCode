@@ -1,5 +1,5 @@
-// Runtime: 0ms     (Beats 100.00%)
-// Memory:  44.49MB (Beats 41.80%)
+// Top Interview 150 | Array / String 004 | Remove Duplicates from a Sorted Array II
+// Time Complexity: O(n^2)
 
 class Solution {
     public int removeDuplicates(int[] nums) {
