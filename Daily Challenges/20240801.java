@@ -1,5 +1,5 @@
-// Runtime: 0ms     (Beats 100.00%)
-// Memory:  42.28MB (Beats 78.58%)
+// Daily Challenge | Aug 01 2024 | Number of Senior Citizens
+// Time Complexity: O(n)
 
 class Solution {
     public int countSeniors(String[] details) {
