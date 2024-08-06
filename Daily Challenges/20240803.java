@@ -1,6 +1,9 @@
 // Daily Challenge | Aug 03 2024 | Make Two Arrays Equal by Reversing Subarrays
 // Time Complexity: O(n^2)
 
+// LeetCode Runtime: 2ms      (Beats 84.59%)
+// LeetCode Memory:  44.26MB  (Beats 55.13%)
+
 class Solution {
     public boolean canBeEqual(int[] target, int[] arr) {
         boolean bCanEqual = false;
