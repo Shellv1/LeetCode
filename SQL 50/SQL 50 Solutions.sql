@@ -19,3 +19,11 @@ FROM World
 WHERE (area >= 3000000) OR (population >= 25000000);
 
 # = = = = = = = = = = = = = = = #
+
+# PROBLEM 04
+SELECT DISTINCT author_id AS id
+FROM Views
+WHERE author_id = viewer_id
+ORDER BY author_id;
+
+# = = = = = = = = = = = = = = = #
