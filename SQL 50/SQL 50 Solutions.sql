@@ -1,3 +1,7 @@
+# = = = = = = = = = = = = = = = #
+#   SELECT                      #
+# = = = = = = = = = = = = = = = #
+
 # PROBLEM 01
 SELECT product_id
 FROM Products
@@ -27,3 +31,13 @@ WHERE author_id = viewer_id
 ORDER BY author_id;
 
 # = = = = = = = = = = = = = = = #
+
+# PROBLEM 05
+SELECT tweet_id
+FROM Tweets
+WHERE (char_length(content) > 15);
+
+# = = = = = = = = = = = = = = = #
+#   BASIC JOINS                 #
+# = = = = = = = = = = = = = = = #
+
