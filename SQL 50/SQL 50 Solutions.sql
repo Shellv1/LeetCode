@@ -41,3 +41,15 @@ WHERE (char_length(content) > 15);
 #   BASIC JOINS                 #
 # = = = = = = = = = = = = = = = #
 
+# PROBLEM 06
+SELECT unique_id, name
+FROM Employees Emp
+LEFT JOIN EmployeeUNI EmpUNI
+    ON Emp.id = EmpUNI.id
+ORDER BY EmpUNI.unique_id
+
+# = = = = = = = = = = = = = = = #
+
+# PROBLEM 07
+
+# = = = = = = = = = = = = = = = #
