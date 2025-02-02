@@ -77,3 +77,23 @@ WHERE w1.temperature > w2.temperature
 # = = = = = = = = = = = = = = = #
 
 # PROBLEM 10
+SELECT
+    a1.machine_id,
+    ROUND( AVG( a2.timestamp - a1.timestamp), 3 ) processing_time
+FROM (
+    SELECT machine_id, timestamp
+    FROM Activity a
+    WHERE a.activity_type = 'start'
+    ORDER BY machine_id, process_id
+) a1
+    JOIN (
+        SELECT machine_id, timestamp
+        FROM Activity a
+        WHERE a.activity_type = 'end'
+        ORDER BY machine_id, process_id
+    ) a2 ON a1.machine_id = a2.machine_id
+GROUP BY machine_id
+
+# = = = = = = = = = = = = = = = #
+
+# PROBLEM 11
