@@ -68,10 +68,10 @@ GROUP BY customer_id
 
 # PROBLEM 09
 SELECT w1.id
-FROM Weather as w1
+FROM Weather w1
     LEFT JOIN (
-        SELECT DATE_ADD(recordDate, INTERVAL 1 DAY) AS recordDate, temperature FROM Weather
-    ) AS w2 ON w1.recordDate = w2.recordDate
+        SELECT DATE_ADD(recordDate, INTERVAL 1 DAY) recordDate, temperature FROM Weather
+    ) w2 ON w1.recordDate = w2.recordDate
 WHERE w1.temperature > w2.temperature
 
 # = = = = = = = = = = = = = = = #
