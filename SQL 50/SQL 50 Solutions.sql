@@ -5,7 +5,9 @@
 # PROBLEM 01
 SELECT product_id
 FROM Products
-WHERE (low_fats = 'Y' AND recyclable = 'Y');
+WHERE
+    low_fats = 'Y' AND
+    recyclable = 'Y';
 
 # = = = = = = = = = = = = = = = #
 
@@ -13,14 +15,16 @@ WHERE (low_fats = 'Y' AND recyclable = 'Y');
 SELECT name
 FROM Customer
 WHERE (referee_id <> 2) is not false;
-# OR  COALESCE(referee_id, '') <> 2;
+# OPTION 2 | WHERE COALESCE(referee_id, '') <> 2;
 
 # = = = = = = = = = = = = = = = #
 
 # PROBLEM 03
 SELECT name, population, area
 FROM World
-WHERE (area >= 3000000) OR (population >= 25000000);
+WHERE
+    (area >= 3000000) OR
+    (population >= 25000000);
 
 # = = = = = = = = = = = = = = = #
 
@@ -44,7 +48,8 @@ WHERE (char_length(content) > 15);
 # PROBLEM 06
 SELECT unique_id, name
 FROM Employees Emp
-  LEFT JOIN EmployeeUNI EmpUNI ON Emp.id = EmpUNI.id
+    LEFT JOIN EmployeeUNI EmpUNI
+    ON Emp.id = EmpUNI.id
 ORDER BY EmpUNI.unique_id
 
 # = = = = = = = = = = = = = = = #
@@ -52,15 +57,19 @@ ORDER BY EmpUNI.unique_id
 # PROBLEM 07
 SELECT product_name, year, price
 FROM Sales s
-  JOIN Product p ON s.product_id = p.product_id
+    JOIN Product p
+    ON s.product_id = p.product_id
 ORDER BY s.product_id
 
 # = = = = = = = = = = = = = = = #
 
 # PROBLEM 08
-SELECT customer_id, COUNT(customer_id) AS count_no_trans
+SELECT 
+    customer_id,
+    COUNT(customer_id) AS count_no_trans
 FROM Visits v
-  LEFT JOIN Transactions t ON v.visit_id = t.visit_id
+    LEFT JOIN Transactions t
+    ON v.visit_id = t.visit_id
 WHERE transaction_id IS NULL
 GROUP BY customer_id
 
@@ -70,8 +79,12 @@ GROUP BY customer_id
 SELECT w1.id
 FROM Weather w1
     LEFT JOIN (
-        SELECT DATE_ADD(recordDate, INTERVAL 1 DAY) recordDate, temperature FROM Weather
-    ) w2 ON w1.recordDate = w2.recordDate
+        SELECT
+            DATE_ADD(recordDate, INTERVAL 1 DAY) recordDate,
+            temperature
+        FROM Weather
+    ) w2
+    ON w1.recordDate = w2.recordDate
 WHERE w1.temperature > w2.temperature
 
 # = = = = = = = = = = = = = = = #
@@ -91,9 +104,21 @@ FROM (
         FROM Activity a
         WHERE a.activity_type = 'end'
         ORDER BY machine_id, process_id
-    ) a2 ON a1.machine_id = a2.machine_id
+    ) a2
+    ON a1.machine_id = a2.machine_id
 GROUP BY machine_id
 
 # = = = = = = = = = = = = = = = #
 
 # PROBLEM 11
+SELECT e.name, b.bonus
+FROM Employee e
+    LEFT JOIN Bonus b
+    ON e.empId = b.empId
+WHERE
+    b.bonus < 1000 OR
+    b.bonus IS NULL
+
+# = = = = = = = = = = = = = = = #
+
+# PROBLEM 12
